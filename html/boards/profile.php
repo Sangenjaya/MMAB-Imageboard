@@ -166,7 +166,7 @@ else //got connection
                 else
                 {
                     echo '<div>';
-                    echo '<ul>';
+                    echo '<ul id="notificationul">';
                     while($noterow = mysqli_fetch_assoc($noteresult))
                     {
                         //echo '<div>';
