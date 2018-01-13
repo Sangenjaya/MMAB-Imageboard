@@ -1,0 +1,707 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EEF2FF;
+    text-align: center;         /* make sure IE centers the page too */
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    //background-image: url('resources/images/eb_wallpaper.png');
+}
+ 
+input{
+    text-align: left;
+}
+
+hr{
+    padding: 0px;
+    margin-top: 10px;
+}
+
+#wrapper {
+    width: 900px;
+    margin: 0 auto;             /* center the page */
+}
+
+#banner{
+    max-width:100%;
+}
+
+#banner img{
+    max-width:100%;
+}
+
+#postformtable{
+    width:200px;
+}
+
+#postformtable td{
+    vertical-align: top;
+}
+
+#createtopic_topic_title_bar{
+    width: 500px;
+
+}
+#createtopic_img_url_bar{
+    padding-bottom: 10px;
+    font-family: monospace;
+    width: 500px;
+ 
+}
+
+#createtopic_postbox{
+    width: 500px;
+}
+
+#header{
+
+}
+ 
+#content {
+    background-color: #fff;
+    float: left;
+    font-family: Arial;
+    text-align: left;
+    width: 100%;                /* fill up the entire div */
+}
+
+#content h2{
+    margin-bottom: 0;
+    word-wrap: break-word;
+
+}
+ 
+#menu {
+    padding: 0px 0px 15px 0px;
+    height: 100%;
+    float: left;
+    border-bottom: none;        /* avoid a double border */
+    clear: both;                /* clear:both makes sure the content div doesn't float next to this one but stays under it */
+    width:100%;
+    background-color: #FFF;
+    text-align: left;
+    font-size: 85%;
+    margin: 0px 0px 5px 0px;
+}
+ 
+#menu a:hover {
+    //background-color: #009FC1;
+}
+
+#menu ul{
+    list-style: outside none none;
+    vertical-align: middle;
+    margin: 20px 0px 20px 0px;
+}
+
+#menu h1{
+    display: inline;
+    float: left;
+    padding: 0 30px 0 20px;
+    color: #000;
+}
+ 
+#userbar {
+    background-color: #fff;
+    /*float: right;*/
+    /*width: 250px;*/
+    /*height: 0;*/
+    /*position: relative;*/
+    /*top: -40px;*/
+    vertical-align: middle;
+    padding-left: 20px;
+    clear: both;
+}
+
+#editprofiletable {
+    width: 70%;
+}
+
+#editprofiletable td{
+    vertical-align: top;
+}
+
+.menulistitem{
+    list-style-type: none;
+    display: inline;
+}
+
+.contentwrapper{
+    padding: 20px;
+}
+
+.boardwrapper{
+    
+}
+
+.userinfotable {
+    width: 560px;
+    margin: 0 auto;
+}
+.editbutton{
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.signinerror{
+    color: red;
+    font-weight: bold;
+}
+
+.imgpost{
+    max-height: 160px;
+    max-width: 160px;
+    float: left;
+    padding-right: 10px;
+}
+
+.imgtable{
+    max-height: 40px;
+    max-width: 40px;
+    border:none;
+    cursor: pointer;
+}
+
+.emoji{
+    height:1.15em;
+    padding-left:1px; 
+    padding-right:1px;
+}
+
+.roll_low{
+    font-weight: bold;
+    color: red;
+}
+
+.roll_mid{
+    font-weight: bold;
+    color: #f4cb42;
+}
+
+.roll_high{
+    font-weight: bold;
+    color: #16e000;
+}
+
+.roll_perfect{
+    font-weight: bold;
+    color: red;
+       /* Chrome, Safari, Opera */
+   
+  -webkit-animation: rainbow 3s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 3s infinite; 
+}
+
+#slowdown{
+    color: red;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+}
+
+#breadcrumbs{
+    margin: 0;
+    word-wrap: break-word;
+}
+
+#tablewrap{
+    width: 100%;
+    padding: 20px;
+}
+
+#boardstable{
+    width:860px;
+}
+
+#boardstable tbody tr{
+    border-top: 1px solid grey;
+
+
+}
+
+#boardstable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#boardstable td{
+    /*min-width: 80px;*/
+    max-width: 260px;
+    word-wrap: break-word;
+}
+
+#boardstablewrapper{
+    padding: 0px 20px 20px 20px;
+}
+
+#posttablewrapper{
+    padding: 0px 20px 20px 20px;
+}
+
+#topicformaterror{
+    color: red;
+    font-weight: bold;
+
+}
+
+.topbottom{
+    padding: 0px 0px 10px 0px;
+}
+.topbottom a{
+	background-color: #4DA9FF;
+	color: #FFF;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.topicbutton{
+    padding: 0px 0px 10px 0px;
+}
+.topicbutton a{
+    background-color: #33cc00;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.topicbutton a:hover{
+    background-color: #2db300;
+}
+
+#signup{
+    width: 50%;
+}
+
+.board_user{
+    color: #002699;
+}
+
+
+.boardusername{
+    color: #002699;
+    text-decoration: none;
+}
+
+.boardusername:hover{
+    color: #002699;
+    text-decoration: underline;
+}
+
+.createtopictable{
+    width: 300px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+
+.createtopictable td{
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.timeat{
+    font-size: 80%;
+}
+
+.inforow td{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11pt;
+}
+
+
+.contentrow td{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10.5pt;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+
+
+.topictitle{
+    text-decoration: none;
+    color: #002699;
+
+}
+.topictitle:hover{
+    text-decoration: underline;
+    color: #3366ff;
+}
+
+.topictitle:visited{
+    color: #6699ff;
+}
+
+.topicusername{
+    text-decoration: none;
+    color: #002699;
+}
+.topicusername:hover{
+    text-decoration: underline;
+    color: #002699;
+}
+.topicusername:visited{
+    color: #002699;
+}
+ 
+#footer {
+    clear: both;
+}
+ 
+/* begin table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+table a {
+    color: #000;
+}
+ 
+table a:hover {
+    color:#373737;
+    text-decoration: none;
+}
+ 
+th {
+    background-color: #4da9ff;
+    color: #F0F0F0;
+    padding: 5px;
+}
+ 
+td {
+    padding: 5px;
+}
+ 
+/* Begin font styles */
+h1, #footer {
+    font-family: Arial;
+    color: #F1F3F1;
+}
+ 
+h3 {margin: 0; padding: 0;}
+ 
+p {
+    display: block;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    padding-top: 0px;
+}
+
+/* Menu styles */
+.item {
+    background-color: #00728B;
+    /*border: 1px solid #032472;*/
+    color: #FFF;
+    font-family: Arial;
+    padding: 10px;
+    text-decoration: none;
+}
+ 
+.leftpart {
+    width: 70%;
+}
+ 
+.rightpart {
+    width: 30%;
+}
+
+.postleft{
+    width: 180px;
+}
+
+.postright{
+    width: 680px;
+}
+
+.uniquepostid{
+    padding-left: 5px;
+    text-decoration: underline;
+  }
+.uniquepostid a{
+    text-decoration: none;
+}
+.uniquepostid:hover{
+	text-decoration: none;
+}
+ 
+.small {
+    font-size: 75%;
+    color: #373737;
+}
+#footer {
+    font-size: 65%;
+    padding: 3px 0 0 0;
+}
+ 
+.topic-post {
+    height: 100px;
+    overflow: auto;
+}
+ 
+.post-content {
+    padding: 30px;
+}
+.postcontent{
+
+}
+ 
+.inforow {
+    background-color: #cce6ff;
+}
+
+.contentrow {
+    background-color: #f2f2f2;
+    word-wrap: break-word;
+}
+
+.inlineimg {
+    height: 1em;
+    width: 1em;
+}
+
+.rainbow {
+   /* Chrome, Safari, Opera */
+   color: red;
+  -webkit-animation: rainbow 3s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 3s infinite; 
+}
+
+@-webkit-keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}    
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}   
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}     
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+}
+
+#paging{
+	margin: 0 auto;
+	text-align: center;
+}
+#paging a{
+	background-color: #4DA9FF;
+	color: #FFF;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.floatquote{
+	background-color: #fff;
+}
+.floatquoteinfo{
+	background-color: #cce6ff;
+	padding: 5px;
+	margin: 0px;
+}
+.floatquotecontent{
+	margin: 5px;
+}
+
+.quotedpost{
+	z-index: 99;
+	position: relative;
+	color: #f00;
+}
+
+.greentext{
+    color: #789922;
+}
+
+#img_url_bar{
+    font-family: monospace;
+}
+
+input[type="submit"]{
+    background-color: #4DA9FF;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#sigtext{
+    width: 400px;
+    height: 30px;
+}
+
+@media (max-width: 425px){
+    #wrapper{
+        width: 400px;
+    }
+    #posttextarea{
+        width:360px;
+    }
+    #tablewrap{
+        width: 360px;
+    }
+    #boardstable{
+        width: 360px;
+    }
+    #boardstable td{
+        max-width: 10px;
+    }
+    #img_url_bar{
+        width: 340px;
+
+    }
+    #posttextarea{
+        width: 340px;
+    }
+    #postformcontent{
+        display: block;
+    }
+    #postformimages{
+        display: block;
+    }
+
+    .boardleftpart{
+
+    }
+    .boardmiddleleft{
+
+    }
+    .boardmiddleright{
+
+    }
+    .boardrightpart{
+
+    }
+
+    .userinfotable{
+        width: 360px;
+    }
+
+    #editprofilemessage{
+        display: block;
+    }
+
+    #sigtext{
+        width: 260px;
+        height: 80px;
+    }
+
+    #createtopic_topic_title_bar{
+    width: 190px;
+
+    }
+    #createtopic_img_url_bar{
+        padding-bottom: 10px;
+        font-family: monospace;
+        width: 190px;
+     
+    }
+
+    #createtopic_postbox{
+        width: 220px;
+    }
+
+}
+
+@media (min-width: 425px) and (max-width: 768px){
+    #wrapper{
+        width: 600px;
+    }
+    #posttextarea{
+        width:560px
+    }
+    #tablewrap{
+        width: 560px;
+    }
+    #boardstable{
+        width: 560px;
+        /*white-space: nowrap;*/
+    }
+    #boardstable td{
+        max-width: 10px;
+    }
+
+    .boardleftpart{
+
+    }
+    .boardmiddleleft{
+
+    }
+    .boardmiddleright{
+
+    }
+    .boardrightpart{
+
+    }
+
+    .userinfotable{
+        width: 560px;
+    }
+
+    #editprofilemessage{
+        display: block;
+    }
+    #sigtext{
+        width: 260px;
+        height: 80px;
+    }
+
+    #createtopic_topic_title_bar{
+    width: 420px;
+
+    }
+    #createtopic_img_url_bar{
+        padding-bottom: 10px;
+        font-family: monospace;
+        width: 420px;
+     
+    }
+
+    #createtopic_postbox{
+        width: 420px;
+    }
+}

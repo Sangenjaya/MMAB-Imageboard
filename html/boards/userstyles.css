@@ -1,0 +1,153 @@
+/*Easy read blue scheme*/
+
+body{
+	background-image: '';
+	background-color: '#e4fffa';
+}
+
+#content{
+	background-color: '#cce3de';
+}
+#userbar{
+	background-color: '';
+}
+#boardstable{
+	background-color: '#e4fffa';
+}
+
+/*Night theme WIP ##############################################*/
+body {
+	background-image: none;
+	color: #fff;
+	background-color: #202426;
+}
+a {
+	/*color: #91adff;*/
+	color: #fff;
+}
+a:hover{
+	text-decoration: none;
+}
+a:visited{
+	/*color: #7195ff;*/
+	color: #fff;
+}
+#menu {
+	background-color: #30363D;
+}
+#menu h1{
+	color: #fff;
+}
+#content {
+	background-color: #30363D;
+}
+#userbar {
+	background-color: #30363D;
+}
+table a {
+	color: #fff;
+}
+table a:hover{
+	color: #fff;
+}
+#boardstable {
+	background-color: #30363D;
+}
+th {
+	background-color: #00AE37;
+}
+#boardstable tbody tr {
+	background-color: #303a3d;
+}
+#boardstable tr:nth-child(even) {
+    background-color: #344142;
+}
+.topictitle{
+	color: #b1c5ff;
+}
+.topictitle:visited{
+	color: #7195ff;
+}
+.boardusername{
+	color: #b1c5ff;
+}
+.boardusername:visited{
+	color: #7195ff;
+}
+.inforow{
+	background-color: #00AE37;
+}
+.contentrow{
+	background-color: #344142;
+}
+.floatquote{
+	background-color: #405052;
+}
+
+/*Hydean theme WIP*/
+body {
+	background-image: url('resources/images/samhyde.jpg');
+	background-color: #202426;
+	color: #303030;
+}
+/*a {
+	color: #fff;
+}
+a:hover{
+	text-decoration: none;
+}
+a:visited{
+	color: #fff;
+}*/
+#menu {
+	background-color: #B9FFDE;
+}
+/*#menu h1{
+	color: #fff;
+}*/
+#content {
+	background-color: #B9FFDE;
+}
+#userbar {
+	background-color: #B9FFDE;
+}
+/*table a {
+	color: #fff;
+}
+table a:hover{
+	color: #fff;
+}*/
+#boardstable {
+	background-color: #30363D;
+}
+th {
+	background-color: #FCBFD0;
+	color: #000;
+}
+#boardstable tbody tr {
+	background-color: #F3E2D9;
+}
+#boardstable tr:nth-child(even) {
+    background-color: #F7E6DC;
+}
+.topictitle{
+	color: #b1c5ff;
+}
+.topictitle:visited{
+	color: #7195ff;
+}
+.boardusername{
+	color: #b1c5ff;
+}
+.boardusername:visited{
+	color: #7195ff;
+}
+.inforow{
+	background-color: #FCBFD0;
+}
+.contentrow{
+	background-color: #F3E2D9;
+}
+.floatquote{
+	background-color: #F3E2D9;
+}
