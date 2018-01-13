@@ -574,6 +574,21 @@ input[type="submit"]{
     height: 30px;
 }
 
+#notificationul{
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+#notificationul li{
+    margin: 5px;
+}
+#notificationul a{
+    padding: 10px 20px;
+    display: inline-block;
+    width: 80%;
+    background-color: #555;
+}
+
 @media (max-width: 425px){
     #wrapper{
         width: 400px;
