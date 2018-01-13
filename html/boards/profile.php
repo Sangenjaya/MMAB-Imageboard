@@ -138,14 +138,14 @@ else //got connection
     <?php 
 
         //add notifications if the user is on his/her own page
-        if ($currentuser == $_SESSION['user_name'] && 0==1){ //0==1 atm, turned notifications off for now.
+        if ($currentuser == $_SESSION['user_name']){ //0==1 atm, turned notifications off for now.
        
     ?>
 </div>
     <div>
         <h3>YOU's</h3>
         <?php 
-            $notesql = "SELECT notifications.note_id, notifications.note_post, notifications.note_topic, notifications.note_quote_by, notifications.note_quote_of, users.user_id, users.user_name FROM notifications INNER JOIN users ON notifications.note_quote_by = users.user_id WHERE notifications.note_quote_of = ".$_SESSION['user_id'];
+            $notesql = "SELECT notifications.note_id, notifications.note_post, notifications.note_topic, notifications.note_quote_by, notifications.note_quote_of, users.user_id, users.user_name FROM notifications INNER JOIN users ON notifications.note_quote_by = users.user_id WHERE notifications.note_quote_of = ".$_SESSION['user_id']. " ORDER BY notifications.note_id DESC LIMIT 0, 10";
             $noteresult = mysqli_query($con, $notesql);
             if(!$noteresult)
             {
@@ -166,22 +166,31 @@ else //got connection
                         echo '<div>';
                         $usersql = "SELECT user_name FROM users WHERE user_id = ".$noterow['note_quote_by'];
                         $userresult = mysqli_query($con, $usersql);
-                        if(!$userresult)
+                        $topicsql = "SELECT topic_title FROM topics WHERE topic_id = ".$noterow['note_topic'];
+                        $topicresult = mysqli_query($con, $topicsql);
+                        if(!$userresult || !$topicresult)
                         {}
                         else
                         {
+                        	echo '<ul>';
                             if(mysqli_num_rows($userresult) == 0)
                             {}
                             else
                             {
                                 $userrow = mysqli_fetch_assoc($userresult);
                                 $user = $userrow['user_name'];
+                                $topicrow = mysqli_fetch_assoc($topicresult);
+                                $topic = $topicrow['topic_title'];
 
+                                echo '<li>';
                                 //echo '<p>notification id'.$noterow['note_id'].'</p>';
                                 echo '<a href="topic.php?id='.$noterow['note_topic'].'#'.$noterow['note_post'].'">';
-                                echo 'Post number '.$noterow['note_post'].' was quoted by '.$user.'.';
-                                echo '</a>';
+                                echo $user.' replied to your post (number '.$noterow['note_post'].') in "'.$topic.'"</a>';
+                                //echo 'Post number: '.$noterow['note_post'].' was quoted by '.$user.'.';
+                                //echo ' in "'.$topic.'"</a>';
+                                echo '</li>';
                             }
+                            echo '</ul>';
                         }
                         echo '</div>';
                     }
