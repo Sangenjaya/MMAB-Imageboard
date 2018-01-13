@@ -154,6 +154,11 @@ else //got connection
             else
             {
                 //was no problems connecting
+
+                //clip off old notifications from the database, only keep the most recent 10 notifications for now.
+            	$oldsql = "DELETE FROM notifications WHERE note_quote_of = ".$_SESSION['user_id']." AND note_id NOT IN (SELECT * FROM (SELECT note_id FROM notifications WHERE note_quote_of = ".$_SESSION['user_id']." ORDER BY note_id DESC LIMIT 0, 10) as t)";
+            	$oldresult = mysqli_query($con, $oldsql);
+
                 if(mysqli_num_rows($noteresult) == 0)
                 {
                     echo 'no notifications.';
@@ -161,9 +166,10 @@ else //got connection
                 else
                 {
                     echo '<div>';
+                    echo '<ul>';
                     while($noterow = mysqli_fetch_assoc($noteresult))
                     {
-                        echo '<div>';
+                        //echo '<div>';
                         $usersql = "SELECT user_name FROM users WHERE user_id = ".$noterow['note_quote_by'];
                         $userresult = mysqli_query($con, $usersql);
                         $topicsql = "SELECT topic_title FROM topics WHERE topic_id = ".$noterow['note_topic'];
@@ -172,7 +178,7 @@ else //got connection
                         {}
                         else
                         {
-                        	echo '<ul>';
+                        	//echo '<ul>';
                             if(mysqli_num_rows($userresult) == 0)
                             {}
                             else
@@ -190,11 +196,12 @@ else //got connection
                                 //echo ' in "'.$topic.'"</a>';
                                 echo '</li>';
                             }
-                            echo '</ul>';
+                            //echo '</ul>';
                         }
-                        echo '</div>';
+                        //echo '</div>';
                     }
-                    echo '</div';
+                    echo '</ul>';
+                    echo '</div>';
                 }
             }
         ?>
