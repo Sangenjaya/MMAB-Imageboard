@@ -1,0 +1,291 @@
+body {
+    background-color: #EEF2FF;
+    text-align: center;         /* make sure IE centers the page too */
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    
+}
+ 
+#content {
+    background-color: #fff;
+    float: left;
+    font-family: Arial;
+    text-align: left;
+    width: 100%;                /* fill up the entire div */
+}
+
+ 
+#menu {
+    padding: 0px 0px 15px 0px;
+    height: 100%;
+    float: left;
+    border-bottom: none;        /* avoid a double border */
+    clear: both;                /* clear:both makes sure the content div doesn't float next to this one but stays under it */
+    width:100%;
+    background-color: #FFF;
+    text-align: left;
+    font-size: 85%;
+    margin: 0px 0px 5px 0px;
+}
+ 
+#menu a:hover {
+    //background-color: #009FC1;
+}
+
+#menu h1{
+    color: #000;
+}
+ 
+#userbar {
+    background-color: #fff;
+}
+
+.userinfotable {
+    border: 1px solid black;
+}
+
+.userinfotable td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #ffffe7;
+}
+
+.userinfotable th {
+    border: none;
+}
+
+.signinerror{
+    color: red;
+    font-weight: bold;
+}
+
+#boardstable tbody tr{
+    border-top: 1px solid grey;
+
+
+}
+
+#boardstable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.topbottom a{
+	background-color: #4DA9FF;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.topicbutton a{
+    background-color: #33cc00;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.topicbutton a:hover{
+    background-color: #2db300;
+}
+
+.editbutton a{
+    background-color: #6699ff;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.editbutton a:hover{
+    background-color: #004de6;
+}
+
+#signup{
+    width: 50%;
+}
+
+.board_user{
+    color: #002699;
+}
+
+
+.boardusername{
+    color: #002699;
+    text-decoration: none;
+}
+
+.boardusername:hover{
+    color: #002699;
+    text-decoration: underline;
+}
+
+.inforow td{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11pt;
+}
+
+
+.contentrow td{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10.5pt;
+}
+
+.topictitle{
+    text-decoration: none;
+    color: #002699;
+
+}
+.topictitle:hover{
+    text-decoration: underline;
+    color: #3366ff;
+}
+
+.topictitle:visited{
+    color: #6699ff;
+}
+
+.topicusername{
+    text-decoration: none;
+    color: #002699;
+}
+.topicusername:hover{
+    text-decoration: underline;
+    color: #002699;
+}
+.topicusername:visited{
+    color: #002699;
+}
+ 
+ 
+/* begin table styles */
+ 
+table a {
+    color: #000;
+}
+ 
+table a:hover {
+    color:#373737;
+    text-decoration: none;
+}
+ 
+th {
+    background-color: #4da9ff;
+    color: #F0F0F0;
+    padding: 5px;
+}
+ 
+/* Begin font styles */
+h1, #footer {
+    font-family: Arial;
+    color: #F1F3F1;
+}
+ 
+
+/* Menu styles */
+.item {
+    background-color: #00728B;
+    /*border: 1px solid #032472;*/
+    color: #FFF;
+    font-family: Arial;
+    padding: 10px;
+    text-decoration: none;
+}
+ 
+.small {
+    font-size: 75%;
+    color: #373737;
+}
+
+.inforow {
+    background-color: #cce6ff;
+}
+
+.contentrow {
+    background-color: #f2f2f2;
+    word-wrap: break-word;
+}
+
+.rainbow {
+   /* Chrome, Safari, Opera */
+   color: red;
+  -webkit-animation: rainbow 3s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 3s infinite; 
+}
+
+@-webkit-keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}    
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}   
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}     
+}
+
+#paging a{
+	background-color: #4DA9FF;
+	color: #FFF;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.floatquote{
+	background-color: #fff;
+}
+.floatquoteinfo{
+	background-color: #cce6ff;
+	padding: 5px;
+	margin: 0px;
+}
+
+.quotedpost{
+	z-index: 99;
+	position: relative;
+	color: #f00;
+}
+
+.greentext{
+    color: #789922;
+}
+
+#img_url_bar{
+    font-family: monospace;
+}
+
+input[type="submit"]{
+    background-color: #4DA9FF;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

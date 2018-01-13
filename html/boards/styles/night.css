@@ -1,0 +1,364 @@
+body {
+    background-color: #DEDEDE;
+    text-align: center;         /* make sure IE centers the page too */
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-image: url('resources/images/eb_wallpaper.png');
+}
+ 
+#menu a:hover {
+    background-color: #009FC1;
+}
+
+#menu h1{
+    display: inline;
+    float: left;
+    padding: 0 30px 0 20px;
+    color: #000;
+}
+ 
+#userbar {
+    background-color: #fff;
+    vertical-align: middle;
+    padding-left: 20px;
+    clear: both;
+}
+
+.userinfotable {
+    border: 1px solid black;
+}
+
+.userinfotable td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #404040;
+}
+
+.userinfotable th {
+    border: none;
+}
+
+
+.signinerror{
+    color: red;
+    font-weight: bold;
+}
+
+
+#boardstable tbody tr{
+    border-top: 1px solid grey;
+
+
+}
+
+#boardstable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#topicformaterror{
+    color: red;
+    font-weight: bold;
+}
+
+.topbottom a{
+	background-color: #4DA9FF;
+	color: #FFF;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.topicbutton a{
+    background-color: #33cc00;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.topicbutton a:hover{
+    background-color: #2db300;
+}
+
+.editbutton a{
+    background-color: #6699ff;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.editbutton a:hover{
+    background-color: #004de6;
+}
+
+.board_user{
+    color: #002699;
+}
+
+
+.boardusername{
+    color: #002699;
+    text-decoration: none;
+}
+
+.boardusername:hover{
+    color: #002699;
+    text-decoration: underline;
+}
+
+.timeat{
+    font-size: 80%;
+}
+
+.inforow td{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11pt;
+}
+
+
+.contentrow td{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10.5pt;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+
+
+.topictitle{
+    text-decoration: none;
+    color: #002699;
+
+}
+.topictitle:hover{
+    text-decoration: underline;
+    color: #3366ff;
+}
+
+.topictitle:visited{
+    color: #6699ff;
+}
+
+.topicusername{
+    text-decoration: none;
+    color: #002699;
+}
+.topicusername:hover{
+    text-decoration: underline;
+    color: #002699;
+}
+.topicusername:visited{
+    color: #002699;
+}
+ 
+#footer {
+    clear: both;
+}
+ 
+/* begin table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+table a {
+    color: #000;
+}
+ 
+table a:hover {
+    color:#373737;
+    text-decoration: none;
+}
+ 
+th {
+    background-color: #4da9ff;
+    color: #F0F0F0;
+    padding: 5px;
+}
+ 
+/* Begin font styles */
+h1, #footer {
+    font-family: Arial;
+    color: #F1F3F1;
+}
+
+/* Menu styles */
+.item {
+    background-color: #00728B;
+    /*border: 1px solid #032472;*/
+    color: #FFF;
+    font-family: Arial;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.rainbow {
+   /* Chrome, Safari, Opera */
+   color: red;
+  -webkit-animation: rainbow 3s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 3s infinite; 
+}
+
+@-webkit-keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}    
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}   
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: red;}
+    15%{color: #e6e600;}
+    40%{color: green;}
+    60%{color: blue;}
+    80%{color: orange;}
+    95%{color: red;}     
+}
+
+
+
+input[type="submit"]{
+    background-color: #4DA9FF;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+body {
+    background-image: none;
+    color: #fff;
+    background-color: #202426;
+}
+a {
+    /*color: #91adff;*/
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+}
+a:visited{
+    /*color: #7195ff;*/
+    color: #fff;
+}
+#menu {
+    background-color: #30363D;
+}
+#menu h1{
+    color: #fff;
+}
+#content {
+    background-color: #30363D;
+}
+#userbar {
+    background-color: #30363D;
+}
+table a {
+    color: #fff;
+}
+table a:hover{
+    color: #fff;
+}
+#boardstable {
+    background-color: #30363D;
+}
+th {
+    background-color: #00AE37;
+}
+#boardstable tbody tr {
+    background-color: #303a3d;
+}
+#boardstable tr:nth-child(even) {
+    background-color: #344142;
+}
+.topictitle{
+    color: #b1c5ff;
+    color: #ccd9ff;
+    
+}
+
+.topictitle:hover{
+    color: #668cff;
+}
+
+.topictitle:visited{
+    color: #7195ff;
+    color: #809fff;
+ 
+}
+.boardusername{
+    color: #ccd9ff;
+}
+
+.boardusername:visited{
+    color: #ccd9ff;
+
+}
+.topicusername{
+    color: #fff;
+    //text-decoration: underline;
+}
+.topicusername:visited{
+    color: #fff;
+}
+.topicusername:hover{
+    text-decoration: underline;
+}
+}
+.topicbutton a{
+    background-color: #6699ff;
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.topicbutton a:hover{
+    background-color: #248f24;
+}
+.inforow{
+    background-color: #096B28;
+}
+.contentrow{
+    background-color: #344142;
+}
+.floatquote{
+    background-color: #405052;
+}
+.floatquoteinfo{
+    background-color: #096B28;
+}
+.greentext{
+    color: #A4D429;
+}
+
+.quotedpost{
+
+}
