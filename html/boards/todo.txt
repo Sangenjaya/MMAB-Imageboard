@@ -1,0 +1,59 @@
+
+- General
+	- What happens if initial message attached to a topic is blank? - needs error
+	- order topics in board.php by most recently commented on?
+	- hide karma.php and sig.php and whatever other ajax ones in the scrips folder
+	- selectable style sheets saved in cookies
+	- add user level title to header
+	- list of old unposted in topics showing in admin panel to be deleted by admin?
+	- fix mobile quote clicking prevent def
+	
+
+CSS:
+
+Quotes:
+- include inforow
+- clicking quote link goes to post
+
+- Admin page
+	- Ban users
+	- Unban
+	- Set xp/autism for users
+
+- UX
+	- Check user desire paths
+	- Check use cases for logins, posting, deleting, reporting, hiding
+
+
+- Future things
+	- Reporting users
+	- Blocking users
+	- User profile page
+	- usernames with upper and lowercase
+	- IP based posting limit, making new topics etc
+
+- Recently Completed
+	- Added priv level column to users, default is 0 (normal user), -1 banned, 1 mod, 2 power mod?, 3 admin.
+	- Got basic topic pages loading posts in table.
+	- made profile page, uses user name as _GET var
+	- made topic post usernames link to profile pages
+	- added link to profile in header
+	- changed placeholders in header to actual xp, level etc
+
+
+
+	//quoting preview filtering
+                            // preg_match_all("/\>\>\d+/", $post, $matches);
+                            // echo print_r($matches[0]);
+                            // foreach ($matches[0] as $key => $oldcode)
+                            // {
+                            //     $newcode = '';
+                            //     $randid = (float)rand()/(float)getrandmax();
+                            //     $randid = (string)$randid;
+                            //     $randid = substr($randid, 3, 8);
+                            //     $randid = ltrim($randid, "0");
+                            //     $formatcode = trim($oldcode, ">>");
+                            //     $calledfromid = $randid . '_' . $formatcode;
+                            //     $newcode = '<a id="'.$randid.'_'.$formatcode.'quote" href="#'.$formatcode.'">'.$oldcode.'</a><script type="text/javascript">document.getElementById("'.$randid.'_'.$formatcode.'quote").addEventListener("mouseover", function(){quotePrev('.$formatcode.', '.$randid.');}, false);</script>';
+                            //     $post = str_replace($oldcode, $newcode, $post);
+                            // }
