@@ -289,3 +289,8 @@ input[type="submit"]{
     text-decoration: none;
     display: inline-block;
 }
+
+#notificationul a{
+	background-color: #E4E4E4;
+	color: #000;
+}

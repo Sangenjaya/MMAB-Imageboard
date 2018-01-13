@@ -587,6 +587,7 @@ input[type="submit"]{
     display: inline-block;
     width: 80%;
     background-color: #555;
+    color: #fff;
 }
 
 @media (max-width: 425px){
