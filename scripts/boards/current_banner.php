@@ -1,5 +1,5 @@
 <?php
 //simply store the current banner being used.
-$current_banner = 7;
+$current_banner = 5;
 
 ?>
