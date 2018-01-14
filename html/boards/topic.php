@@ -343,6 +343,8 @@ else
 
                             //quoting prev for external posts
                             $quotemade = false;
+                            $quotecount = 0;
+                            $quotearray = array();
 
                             preg_match_all("/\>\>\d+/", $post, $extmatches);
                             foreach ($extmatches[0] as $extkey => $extoldcode)
@@ -360,6 +362,8 @@ else
                                     $hrefcode = $extformatcode;
                                     $extnewcode = '<a data-rand="'.$randid.'" data-post="'.$extformatcode.'" href=#'.$hrefcode.' class="quotedpost" id="'.$randid.'_'.$extformatcode.'extquote">'.$extoldcode.'<a id="'.$randid.'_mobquote" style="display:none;z-index:101;position:relative;" href=#'.$hrefcode.'>#</a></a><script type="text/javascript">document.getElementById("'.$randid.'_'.$extformatcode.'extquote").addEventListener("mouseover", function(){quoteExtPrev('.$extformatcode.', '.$randid.');}, false);</script>';
                                     $quotemade = true;
+                                    $quotecount++;
+                                    array_push($quotearray, $extformatcode);
                                 }
                                 else //post is from a different topic
                                 {
@@ -381,6 +385,8 @@ else
                                                 $extra = true;
                                             $extnewcode = '<a data-rand="'.$randid.'" data-post="'.$extformatcode.'" href='.$hrefcode.' class="quotedpost" id="'.$randid.'_'.$extformatcode.'extquote">>'.$extoldcode.'<a id="'.$randid.'_mobquote" style="display:none;z-index:101;position:relative;" href=#'.$hrefcode.'>#</a></a><script type="text/javascript">document.getElementById("'.$randid.'_'.$extformatcode.'extquote").addEventListener("mouseover", function(){quoteExtPrev('.$extformatcode.', '.$randid.');}, false);</script>';
                                             $quotemade = true;
+                                            $quotecount++;
+                                            array_push($quotearray, $extformatcode);
                                         }
                                         
                                     }
@@ -442,25 +448,48 @@ else
                                 //save notifications///////////////////////////
                                 if($quotemade)
                                 {
-                                    $postbyuserid = 0;
-                                    $postbysql = "SELECT post_by from posts WHERE post_id =".$extformatcode;
-                                    $postbyresult = mysqli_query($con, $postbysql);
-                                    if(!$postbyresult){}
-                                    else
-                                    {
-                                        if(mysqli_num_rows($postbyresult) == 0){}
-                                        else
-                                        {
-                                            $postbyrow = mysqli_fetch_assoc($postbyresult);
-                                            $postbyuserid = $postbyrow['post_by'];
-                                            $notesql = "INSERT INTO notifications(note_post, note_topic, note_quote_by, note_quote_of) VALUES ('".$justpostedid."', '".$_GET['id']."', '".$_SESSION['user_id']."', '".$postbyuserid."')";
-                                            $noteresult = mysqli_query($con,$notesql);
-                                            if(!notesql)
-                                            {
-                                                //problem saving the notification
-                                            }
-                                        }
-                                    }
+                                	for ($i = 0; $i <= $quotecount; $i++)
+                                	{ 
+                                		$postbyuserid = 0;
+	                                    $postbysql = "SELECT post_by from posts WHERE post_id =".$quotearray[$i];
+	                                    $postbyresult = mysqli_query($con, $postbysql);
+	                                    if(!$postbyresult){}
+	                                    else
+	                                    {
+	                                        if(mysqli_num_rows($postbyresult) == 0){}
+	                                        else
+	                                        {
+	                                            $postbyrow = mysqli_fetch_assoc($postbyresult);
+	                                            $postbyuserid = $postbyrow['post_by'];
+	                                            $notesql = "INSERT INTO notifications(note_post, note_topic, note_quote_by, note_quote_of) VALUES ('".$justpostedid."', '".$_GET['id']."', '".$_SESSION['user_id']."', '".$postbyuserid."')";
+	                                            $noteresult = mysqli_query($con,$notesql);
+	                                            if(!notesql)
+	                                            {
+	                                                //problem saving the notification
+	                                            }
+	                                        }
+	                                    }
+                                	}
+
+                                    // $postbyuserid = 0;
+                                    // $postbysql = "SELECT post_by from posts WHERE post_id =".$extformatcode;
+                                    // $postbyresult = mysqli_query($con, $postbysql);
+                                    // if(!$postbyresult){}
+                                    // else
+                                    // {
+                                    //     if(mysqli_num_rows($postbyresult) == 0){}
+                                    //     else
+                                    //     {
+                                    //         $postbyrow = mysqli_fetch_assoc($postbyresult);
+                                    //         $postbyuserid = $postbyrow['post_by'];
+                                    //         $notesql = "INSERT INTO notifications(note_post, note_topic, note_quote_by, note_quote_of) VALUES ('".$justpostedid."', '".$_GET['id']."', '".$_SESSION['user_id']."', '".$postbyuserid."')";
+                                    //         $noteresult = mysqli_query($con,$notesql);
+                                    //         if(!notesql)
+                                    //         {
+                                    //             //problem saving the notification
+                                    //         }
+                                    //     }
+                                    // }
                                 }
 
                                 //after a lot of work, the query succeeded!
